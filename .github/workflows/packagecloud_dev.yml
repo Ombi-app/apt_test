@@ -34,13 +34,9 @@ jobs:
             shared Plex or Emby users the ability to request content by themselves!
             Ombi can be linked to multiple TV Show and Movie DVR tools to create
             a seamless end-to-end experience for your users.  
-  
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: TykTechnologies/packagecloud-action@v1
+
+      - name: Publish packages
+        uses: TykTechnologies/packagecloud-action@v1
         with:
           repo: Ombi-app/Ombi
 
