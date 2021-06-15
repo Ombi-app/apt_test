@@ -8,9 +8,9 @@ on:
       version:
         description: "Version to publish"
         required: true
-  push:
-    branches:
-      - test
+#  push:
+#    branches:
+#      - testing
   
 jobs:
   Deb:
