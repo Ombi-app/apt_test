@@ -1,0 +1,21 @@
+# This is a basic workflow to test
+name: Push dev to PackageCloud
+# Controls when the action will run. Workflow runs when manually triggered using the UI or API.
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - test
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: TykTechnologies/packagecloud-action@v1
+        with:
+          repo: Ombi-app/Ombi/develop
+
+        env:
+          PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
