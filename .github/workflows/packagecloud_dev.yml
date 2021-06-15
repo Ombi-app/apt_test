@@ -38,10 +38,11 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - uses: TykTechnologies/packagecloud-action@v1
         with:
-          repo: Ombi-app/Ombi/develop
+          repo: Ombi-app/Ombi
 
         env:
           PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
