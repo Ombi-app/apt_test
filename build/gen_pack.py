@@ -62,7 +62,7 @@ data["description"] = data["description"].replace("\n", "\n ")
 def gen_metadata(data):
     r = requests.get(url=url + f"/releases/tags/{data['tag']}", headers=headers).json()
 
-    changelog = f"Automaticity generated, visit https://github.com/{data['project']}/releases/tag/{data['tag']}\n"
+    changelog = f"Automatically generated, visit https://github.com/{data['project']}/releases/tag/{data['tag']}\n"
     changelog += r.get("body") if isinstance(r.get("body"), str) else ""
     changelog = changelog.replace('\n', '\n  ').replace('\r', '')
     data["changelog"] = changelog
