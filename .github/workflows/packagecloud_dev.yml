@@ -25,7 +25,7 @@ jobs:
         id: build
         with:
           repo: Ombi-app/Ombi
-          maintainer: Berserkir-Wolf <contact@berserkir.net>
+          maintainer: Berserkir-Wolf <dyson@berserkir.net>
           name: ombi
           version: ${{ github.event.inputs.version }}
           description: |
